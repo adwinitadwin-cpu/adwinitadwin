@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Блог Андрія Шміло — Поглиблені технічні статті та гайди про React, Next.js, WebGL, TypeScript та оптимізацію продуктивності Frontend-додатків.">
+    <title>Блог — Андрій Шміло | Frontend Розробник</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="static/fonts/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/fonts/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/fonts/favicon-16x16.png">
+    <link rel="manifest" href="static/fonts/site.webmanifest">
+    <link rel="stylesheet" href="static/styles/style.css">
+    <link rel="stylesheet" href="static/styles/style.style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="subpage">
+    <canvas id="particleCanvas"></canvas>
+    <header class="header">
+        <div class="container header__content">
+            <a href="index.html" class="logo">
+                Андрій<span class="logo--neon">Шміло</span>
+            </a>
+            <nav id="main-nav" class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-key="nav_home">Головна</a></li>
+                    <li><a href="about.html" class="nav-link" data-key="nav_about">Про мене</a></li>
+                    <li><a href="services.html" class="nav-link" data-key="nav_services">Послуги</a></li>
+                    <li><a href="projects.html" class="nav-link" data-key="nav_projects">Проєкти</a></li>
+                    <li><a href="contact.html" class="nav-link" data-key="nav_contact">Контакти</a></li>
+                    <li><a href="blog.html" class="nav-link" data-key="nav_blog">Блог</a></li>
+                </ul>
+            </nav>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="uk" aria-label="Українська" aria-pressed="true">UA</button>
+                <button class="lang-btn" data-lang="en" aria-label="English" aria-pressed="false">EN</button>
+                <button class="lang-btn" data-lang="ru" aria-label="Русский" aria-pressed="false">RU</button>
+            </div>
+            <button id="burger" class="burger" aria-expanded="false" aria-controls="main-nav" aria-label="Меню">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <section id="about" class="section" data-aos="fade-up">
+
+            <h2 data-i18n="about.title">Про Андрія Шміло</h2>
+
+            <p class="lead" data-i18n="about.lead">Я — Senior Frontend-розробник з 5+ роками досвіду, що прагне
+                поєднувати технічну досконалість із візуальною естетикою. Моя мета — створювати веб-досвіди, які є не
+                тільки функціональними, але й незабутніми.</p>
+
+
+
+            <div class="about-content">
+
+                <div class="text-block">
+
+                    <p data-i18n="about.paragraph1">Моя пристрасть полягає в перетворенні складних концепцій дизайну на
+                        чистий, ефективний та кросбраузерний код. Я майстер у всьому, що стосується користувацького
+                        інтерфейсу: від чистого HTML/CSS до складних архітектур Redux/Zustand у React-додатках. Я
+                        гарантую, що кожен піксель працює ідеально, а код легко підтримується.</p>
+
+                    <p data-i18n="about.paragraph2">Я постійно вивчаю нові інструменти — від Web Assembly до останніх
+                        можливостей CSS. Вважаю, що найкращий код — це чистий, протестований та доступний код. Я активно
+                        використовую методології Agile та Scrum для забезпечення прозорого та ефективного процесу
+                        розробки.</p>
+
+
+
+                    <h3 class="neon-text" style="font-size: 1.5rem; margin-top: 2rem;" data-i18n="about.skillsTitle">
+                        Ключові Технічні Навички</h3>
+
+                    <ul class="skills-list">
+
+                        <li>**Фреймворки:** React.js, Next.js, Vue.js</li>
+
+                        <li>**Мови:** JavaScript (ES6+), TypeScript, HTML5, CSS3/SASS/Tailwind</li>
+
+                        <li>**Графіка/3D:** WebGL, Three.js, Babylon.js</li>
+
+                        <li>**Стейт-менеджмент:** Redux Toolkit, Zustand, MobX</li>
+
+                        <li>**Тестування:** Jest, Cypress, React Testing Library</li>
+
+                        <li>**Інше:** Git, Webpack, Vite, Docker (базово)</li>
+
+                    </ul>
+
+                </div>
+
+                <img src="static/images/avatar_main.jpg" alt="Андрій Шміло на роботі" class="about-photo" loading="lazy"
+                    width="300" height="400">
+
+            </div>
+
+        </section>
+
+    <main>
+        <section class="services section page-header">
+            <div class="container">
+                <h1 class="section-title" data-key="services_title" data-aos="fade-up">Мої Кібер-Послуги: Цифрова Трансформація</h1>
+                <p class="section-lead" data-key="services_lead" data-aos="fade-up" data-aos-delay="100">Я пропоную повний цикл розробки, щоб ваша ідея стала повноцінним, працюючим цифровим продуктом.</p>
+
+                <div class="services-full-grid">
+                    <div class="service-item" data-aos="fade-up" data-aos-delay="200">
+                        <h3 data-key="service1_h">Розробка Full-Stack (MERN/MEVN)</h3>
+                        <p data-key="service1_p">Створення **масштабованих web-додатків** з єдиною кодовою базою для ефективного керування та швидкого запуску MVP.</p>
+                        <p class="service-benefit" data-key="service1_benefit">**Ваша вигода:** Швидкість розробки, цілісність системи та легке масштабування під високі навантаження.</p>
+                    </div>
+                    <div class="service-item" data-aos="fade-up" data-aos-delay="300">
+                        <h3 data-key="service2_h">UX/UI Дизайн та Анімація</h3>
+                        <p data-key="service2_p">Проектування логічних та естетично привабливих інтерфейсів із застосуванням **неонового стилю** та **3D-анімацій (Three.js)**.</p>
+                        <p class="service-benefit" data-key="service2_benefit">**Ваша вигода:** Привабливість інтерфейсу, що підвищує конверсію, та бездоганний користувацький досвід (UX).</p>
+                    </div>
+                    <div class="service-item" data-aos="fade-up" data-aos-delay="400">
+                        <h3 data-key="service3_h">DevOps, CI/CD та Cloud-інфраструктура</h3>
+                        <p data-key="service3_p">Налаштування безперервної інтеграції/доставки (CI/CD) та **автоматизоване розгортання** в AWS, Azure або Google Cloud. Контейнеризація за допомогою Docker.</p>
+                        <p class="tech-list-small" data-key="service3_tech_list">**Ключові технології:** Docker, Kubernetes, Terraform, GitHub Actions, AWS/Azure.</p>
+                    </div>
+                    <div class="service-item" data-aos="fade-up" data-aos-delay="500">
+                        <h3 data-key="service4_h">Консалтинг, Аудит та Оптимізація</h3>
+                        <p data-key="service4_p">Глибокий аналіз існуючого коду, виявлення "вузьких місць" та оптимізація продуктивності до рівня **90+ балів у Lighthouse**.</p>
+                        <p class="service-benefit" data-key="service4_benefit">**Ваша вигода:** Зниження витрат на інфраструктуру та покращення SEO завдяки швидкості.</p>
+                    </div>
+                    <div class="service-item" data-aos="fade-up" data-aos-delay="600">
+                        <h3 data-key="service5_h">Web3/Blockchain та Смарт-Контракти</h3>
+                        <p data-key="service5_p">Впровадження смарт-контрактів на **Solidity**, розробка децентралізованих рішень (DApps) та інтеграція криптогаманців.</p>
+                        <p class="service-benefit" data-key="service5_benefit">**Ваша вигода:** Прозорість, безпека та можливість створення інноваційних фінансових або ігрових рішень.</p>
+                    </div>
+                    <div class="service-item" data-aos="fade-up" data-aos-delay="700">
+                        <h3 data-key="service6_h">Технічна Підтримка та Супровід 24/7</h3>
+                        <p data-key="service6_p">Постійна підтримка, моніторинг (Sentry, Prometheus) та швидке виправлення помилок після запуску. Забезпечення **кібербезпеки**.</p>
+                    </div>
+                </div>
+
+                <p class="services-outro" data-key="services_outro" data-aos="fade-up">Готові обговорити ваш проєкт та визначити індивідуальну стратегію? Зв'яжіться зі мною, щоб отримати деталізовану пропозицію.</p>
+            </div>
+        </section>
+    </main>
+
+      <footer class="footer">
+        <div class="container footer__content">
+            <p class="footer__mission" data-key="footer_mission">Мантра: "Код — це поезія в цифрову епоху."</p>
+            <div class="footer__links">
+                  <a href="mailto:Adwinitadwin@Gmail.com" target="_blank" aria-label="Gmail"><i
+                        class="fas fa-envelope"></i></a>
+
+                <a href="https://t.me/Adwinitadwin" target="_blank" aria-label="Telegram"><i
+                        class="fab fa-telegram-plane"></i></a>
+
+                <a href="https://github.com/adwinitadwin-cpu" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+            </div>
+            <p class="footer__rights">&copy; <span id="currentYear">2025</span> Андрій Шміло. <span data-key="footer_rights">Всі права захищені.</span></p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="static/script/particles.js"></script>
+    <script src="static/script/script.js" defer></script>
+</body>
+</html>

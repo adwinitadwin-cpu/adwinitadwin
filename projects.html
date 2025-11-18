@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Блог Андрія Шміло — Поглиблені технічні статті та гайди про React, Next.js, WebGL, TypeScript та оптимізацію продуктивності Frontend-додатків.">
+    <title>Блог — Андрій Шміло | Frontend Розробник</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="static/fonts/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/fonts/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/fonts/favicon-16x16.png">
+    <link rel="manifest" href="static/fonts/site.webmanifest">
+    <link rel="stylesheet" href="static/styles/style.css">
+    <link rel="stylesheet" href="static/styles/style.style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="subpage">
+    <canvas id="particleCanvas"></canvas>
+    <header class="header">
+        <div class="container header__content">
+            <a href="index.html" class="logo">
+                Андрій<span class="logo--neon">Шміло</span>
+            </a>
+            <nav id="main-nav" class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-key="nav_home">Головна</a></li>
+                    <li><a href="about.html" class="nav-link" data-key="nav_about">Про мене</a></li>
+                    <li><a href="services.html" class="nav-link" data-key="nav_services">Послуги</a></li>
+                    <li><a href="projects.html" class="nav-link" data-key="nav_projects">Проєкти</a></li>
+                    <li><a href="contact.html" class="nav-link" data-key="nav_contact">Контакти</a></li>
+                    <li><a href="blog.html" class="nav-link" data-key="nav_blog">Блог</a></li>
+                </ul>
+            </nav>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="uk" aria-label="Українська" aria-pressed="true">UA</button>
+                <button class="lang-btn" data-lang="en" aria-label="English" aria-pressed="false">EN</button>
+                <button class="lang-btn" data-lang="ru" aria-label="Русский" aria-pressed="false">RU</button>
+            </div>
+            <button id="burger" class="burger" aria-expanded="false" aria-controls="main-nav" aria-label="Меню">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="projects section page-header">
+            <div class="container">
+                <h1 class="section-title" data-key="projects_title" data-aos="fade-up">Портфоліо: Вибрані Кібер-Проєкти</h1>
+                <p class="section-lead" data-key="projects_lead" data-aos="fade-up" data-aos-delay="100">Ось деякі з моїх найцікавіших та найбільш технологічно складних робіт.</p>
+
+                <div class="projects-full-grid">
+                    <a href="#" class="project-item" data-aos="fade-up" data-aos-delay="200">
+                        <h3 data-key="project1_h">Neo-Shop E-Commerce</h3>
+                        <p data-key="project1_p">Повноцінна платформа електронної комерції. Стек: Next.js, Apollo/GraphQL.</p>
+                        <span class="tag">Next.js</span><span class="tag">GraphQL</span><span class="tag">E-Commerce</span>
+                    </a>
+                    <a href="#" class="project-item" data-aos="fade-up" data-aos-delay="300">
+                        <h3 data-key="project2_h">Аналітичний Дашборд</h3>
+                        <p data-key="project2_p">Інструмент для візуалізації великих даних у реальному часі. Стек: React, D3.js.</p>
+                        <span class="tag">React</span><span class="tag">D3.js</span><span class="tag">DataViz</span>
+                    </a>
+                    <a href="#" class="project-item" data-aos="fade-up" data-aos-delay="400">
+                        <h3 data-key="project3_h">Децентралізований Форум (Web3)</h3>
+                        <p data-key="project3_p">Форум на основі блокчейну. Стек: Solidity, Ethers.js.</p>
+                        <span class="tag">Web3</span><span class="tag">Solidity</span><span class="tag">Blockchain</span>
+                    </a>
+                    <a href="#" class="project-item" data-aos="fade-up" data-aos-delay="500">
+                        <h3 data-key="project4_h">Система Управління Контентом (CMS)</h3>
+                        <p data-key="project4_p">Кастомна, безпечна та швидка headless CMS. Стек: TypeScript, NestJS.</p>
+                        <span class="tag">TypeScript</span><span class="tag">NestJS</span><span class="tag">Headless</span>
+                    </a>
+                </div>
+
+                <div class="projects-cta" data-aos="fade-up" data-aos-delay="600">
+                    <a href="contact.html" class="cta-button" data-key="projects_cta">Обговорити Мій Наступний Проєкт</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <footer class="footer">
+        <div class="container footer__content">
+            <p class="footer__mission" data-key="footer_mission">Мантра: "Код — це поезія в цифрову епоху."</p>
+            <div class="footer__links">
+                  <a href="mailto:Adwinitadwin@Gmail.com" target="_blank" aria-label="Gmail"><i
+                        class="fas fa-envelope"></i></a>
+
+                <a href="https://t.me/Adwinitadwin" target="_blank" aria-label="Telegram"><i
+                        class="fab fa-telegram-plane"></i></a>
+
+                <a href="https://github.com/adwinitadwin-cpu" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+            </div>
+            <p class="footer__rights">&copy; <span id="currentYear">2025</span> Андрій Шміло. <span data-key="footer_rights">Всі права захищені.</span></p>
+        </div>
+    </footer>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="static/script/particles.js"></script>
+    <script src="static/script/script.js" defer></script>
+</body>
+</html>

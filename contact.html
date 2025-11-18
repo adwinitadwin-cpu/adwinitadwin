@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Блог Андрія Шміло — Поглиблені технічні статті та гайди про React, Next.js, WebGL, TypeScript та оптимізацію продуктивності Frontend-додатків.">
+    <title>Блог — Андрій Шміло | Frontend Розробник</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="static/fonts/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/fonts/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/fonts/favicon-16x16.png">
+    <link rel="manifest" href="static/fonts/site.webmanifest">
+    <link rel="stylesheet" href="static/styles/style.css">
+    <link rel="stylesheet" href="static/styles/style.style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="subpage">
+    <canvas id="particleCanvas"></canvas>
+    <header class="header">
+        <div class="container header__content">
+            <a href="index.html" class="logo">
+                Андрій<span class="logo--neon">Шміло</span>
+            </a>
+            <nav id="main-nav" class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-key="nav_home">Головна</a></li>
+                    <li><a href="about.html" class="nav-link" data-key="nav_about">Про мене</a></li>
+                    <li><a href="services.html" class="nav-link" data-key="nav_services">Послуги</a></li>
+                    <li><a href="projects.html" class="nav-link" data-key="nav_projects">Проєкти</a></li>
+                    <li><a href="contact.html" class="nav-link" data-key="nav_contact">Контакти</a></li>
+                    <li><a href="blog.html" class="nav-link" data-key="nav_blog">Блог</a></li>
+                </ul>
+            </nav>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="uk" aria-label="Українська" aria-pressed="true">UA</button>
+                <button class="lang-btn" data-lang="en" aria-label="English" aria-pressed="false">EN</button>
+                <button class="lang-btn" data-lang="ru" aria-label="Русский" aria-pressed="false">RU</button>
+            </div>
+            <button id="burger" class="burger" aria-expanded="false" aria-controls="main-nav" aria-label="Меню">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact section page-header">
+            <div class="container">
+                <h1 class="section-title" data-key="contact_title" data-aos="fade-up">Зв'яжіться зі Мною: Час для дії</h1>
+                <p class="section-lead" data-key="contact_lead" data-aos="fade-up" data-aos-delay="100">Напишіть мені, і ми обговоримо, як я можу допомогти вам досягти цілей.</p>
+
+                <div class="contact-grid">
+                    <form class="contact-form" data-aos="fade-right" data-aos-delay="200">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" " data-key="contact_name_ph">
+                            <label for="name" data-key="contact_name_ph">Ваше Ім'я</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" " data-key="contact_email_ph">
+                            <label for="email" data-key="contact_email_ph">Ваша Електронна Пошта</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required placeholder=" " data-key="contact_message_ph"></textarea>
+                            <label for="message" data-key="contact_message_ph">Ваше Повідомлення...</label>
+                        </div>
+                        <button type="submit" class="cta-button form-button" data-key="contact_button">Надіслати Повідомлення</button>
+                        <p class="form-assurance" data-key="contact_assurance">Ваша інформація буде використана виключно для відповіді на ваш запит.</p>
+                    </form>
+
+                    <div class="contact-info" data-aos="fade-left" data-aos-delay="300">
+                        <address class="address-box">
+                            <p class="label">Email:</p>
+                            <a href="mailto:max@cyberdev.com" class="neon-link">max@cyberdev.com</a>
+                        </address>
+                        
+                        <div class="address-box">
+                            <p class="label">Telegram:</p>
+                            <a href="https://t.me/max_cyber" class="neon-link">@max_cyber</a>
+                        </div>
+                        
+                        <div class="address-box">
+                            <p class="label">Соціальні мережі:</p>
+                            <div class="social-links">
+                                <a href="#" aria-label="LinkedIn" class="neon-link">LinkedIn</a> | 
+                                <a href="#" aria-label="GitHub" class="neon-link">GitHub</a> | 
+                                <a href="#" aria-label="Twitter" class="neon-link">Twitter</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+       <footer class="footer">
+        <div class="container footer__content">
+            <p class="footer__mission" data-key="footer_mission">Мантра: "Код — це поезія в цифрову епоху."</p>
+            <div class="footer__links">
+                  <a href="mailto:Adwinitadwin@Gmail.com" target="_blank" aria-label="Gmail"><i
+                        class="fas fa-envelope"></i></a>
+
+                <a href="https://t.me/Adwinitadwin" target="_blank" aria-label="Telegram"><i
+                        class="fab fa-telegram-plane"></i></a>
+
+                <a href="https://github.com/adwinitadwin-cpu" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+            </div>
+            <p class="footer__rights">&copy; <span id="currentYear">2025</span> Андрій Шміло. <span data-key="footer_rights">Всі права захищені.</span></p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="static/script/particles.js"></script>
+    <script src="static/script/script.js" defer></script>
+</body>
+</html>
